@@ -38,10 +38,7 @@ bool Address::add_entry(const std::string& name, const int& value){
 
 bool Address::del_entry(int* address){
 	if (address == 0){
-		while (entries.size() > 0){
-			delete entries[entries.size()-1].addr_;
-			entries.erase(entries.end()-1);
-		}
+		entries.clear();
 		return 1;
 	}
 	else{
